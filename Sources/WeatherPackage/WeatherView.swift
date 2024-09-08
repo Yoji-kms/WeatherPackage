@@ -14,6 +14,7 @@ public final class WeatherView: UIView {
         let label = UILabel()
         label.font = .systemFont(ofSize: 36, weight: .bold)
         label.adjustsFontSizeToFitWidth = true
+        label.textAlignment = .center
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
