@@ -20,16 +20,10 @@ public final class WeatherView: UIView {
         return label
     }()
     
-    let backgroundColors: [UIColor] = [
-        .white,
-        .systemMint,
-        .systemPink
-    ]
-    
 //    MARK: Lifecycle
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = self.backgroundColors.randomElement()
+        self.backgroundColor = .white
         self.setupViews()
     }
     
