@@ -20,10 +20,16 @@ public final class WeatherView: UIView {
         return label
     }()
     
+    let backgroundColors: [UIColor] = [
+        .white,
+        .systemMint,
+        .systemPink
+    ]
+    
 //    MARK: Lifecycle
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .white
+        self.backgroundColor = self.backgroundColors.randomElement()
         self.setupViews()
     }
     
@@ -50,7 +56,6 @@ public final class WeatherView: UIView {
             guard let self else { return }
             DispatchQueue.main.async {
                 self.label.text = "\(newWeather)º"
-                
             }
         }
     }
