@@ -33,7 +33,6 @@ final class WeatherViewModel {
             }
         } else {
             let coordinates = Coordinates()
-            print(coordinates)
             self.getNewWeatherBy(coordinates: coordinates, completion: completion)
         }
     }
